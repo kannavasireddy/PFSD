@@ -4,7 +4,11 @@
 	
 	<h1>Login</h1>
 <br/>
-
+{% for message in messages %}
+    <div class="message text-center alert alert-info {{ message.tags }}">
+        {{ message }}
+    </div>
+{% endfor %}
 
 		<form action="" method=POST>
 			{% csrf_token %}
